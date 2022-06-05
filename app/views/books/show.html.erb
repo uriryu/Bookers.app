@@ -1,0 +1,17 @@
+<h2>Title:</h2>
+<p><%= @book.本のタイトル %></p>
+
+<h2>Body:</h2>
+<p><%= @book.感想 %></p>
+
+<div>
+  <span>
+      <%= link_to "Edit", edit_book_path %>
+  </span>
+  <p>
+    |
+  </p>
+  <span>
+    <%= link_to "Back", "/books" %>
+  </span>
+</div>
