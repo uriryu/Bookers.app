@@ -2,25 +2,47 @@
   <strong>Editing Book</strong>
 </h1>
 
+<% if @book.errors.any? %>
+<div id="error_explanation">
+  <h2 class="error"><%= @book.errors.count %> errors prohibited this book from being updated:</h2>
+
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
 <%= form_with model: @book do |f| %>
 
-  <h4>Title</h4>
-  <%= f.text_field :本のタイトル %>
-  
-  <h4>Body</h4>
-  <%=f.text_area :感想 %>
-  
-  <%= f.submit 'Update Book' %>
-  
-  <span>
-    <%= link_to "Show", book_path %>
-  </span>
-  <p>
-    |
-  </p>
-  <span>
-    <%= link_to "Back", "/books" %>
-  </span>
+  <div class="edit">
+    <h4>Title</h4>
+    <div class="field">
+      <%= f.text_field :title %>
+    </div>
+
+    <h4>Body</h4>
+    <div class="field">
+      <%=f.text_area :body %>
+    </div>
+
+    <div class="action">
+      <%= f.submit 'Update Book' %>
+    </div>
+
+
+    <div class="link-box">
+      <span>
+        <%= link_to "Show", book_path %>
+      </span>
+      <span class="vertical-bar">
+        |
+      </span>
+      <span>
+        <%= link_to "Back", "/books" %>
+      </span>
+    </div>
+  </div>
 <% end %>
-  
-  
+

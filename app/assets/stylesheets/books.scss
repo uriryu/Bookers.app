@@ -6,6 +6,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+#error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+
 h1 {
     display: block;
     font-size: 2em;
@@ -59,4 +89,88 @@ label {
   display: block;
 }
 
-.field_with_errors{padding:2px;background-color:red;display:table}
+.field_with_errors{
+  padding:2px;
+  background-color:red;
+  display:table
+
+}
+
+#error_explanation {
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    
+}
+.error {
+  background-color: #c00;
+  color: #fff;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.link-box {
+  display: flex;
+  color: #666666;
+  margin: 10px;
+}
+
+.vertical-bar {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.edit {
+  display: inline-block;
+  marging: 33px;
+}
+
+input[type="submit" i] {
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    color: buttontext;
+    padding: 1px 6px;
+    border-width: 1px;
+    border-style: outset;
+    border-color: #666666;
+    border-image: initial;
+    border-radius: 3px;
+}
+
+p, ol, ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+
+h4 {
+  margin-bottom: 1px;
+}
+
+.field, .actions {
+    margin-bottom: 10px;
+}
+
+.show-box {
+  margin: 33px;
+}
+
+#notice {
+    color: green;
+}
+
+#alert {
+  color: green;
+}

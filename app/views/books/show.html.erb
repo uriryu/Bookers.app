@@ -1,16 +1,24 @@
-<h2>Title:</h2>
-<p><%= @book.本のタイトル %></p>
+<div class="show-box">
+  
+  <p class="show-item">
+    <strong>Title:</strong>
+    <%= @book.title %>
+  </p>
 
-<h2>Body:</h2>
-<p><%= @book.感想 %></p>
+  
+  <p class="show-item">
+    <strong>Body:</strong>
+    <%= @book.body %>
+  </p>
+</div>
 
 <div>
   <span>
       <%= link_to "Edit", edit_book_path %>
   </span>
-  <p>
-    |
-  </p>
+  <span class="vertical-bar">
+      |
+  </span>
   <span>
     <%= link_to "Back", "/books" %>
   </span>
